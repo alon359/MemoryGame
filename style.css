@@ -1,37 +1,53 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-boxl;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    background-color: coral;
-}
-
-.gameContainer {
-    width: 1100px;
-    height: 900px;
-    border: solid black 9px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-
-.memory-card {
-    width: 100%;
-}
-
-.front-face .back-face {
-    margin: 100px;
-    width: 100%;
-    padding: 20px;
-}
-
-
-/* .front-face {
-    width: 40px;
-    position: absolute;
-    left: 500px;
-} */
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                height: 100vh;
+                display: flex;
+                background-color: coral;
+            }
+            
+            .gameContainer {
+                width: 3000px;
+                height: 1600px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+                perspective: 1000px;
+            }
+            
+            .memory-card {
+                width: calc(25% - 10px);
+                height: calc(25% - 10px);
+                position: relative;
+                margin: 5px;
+                transform: scale(1);
+                transform-style: preserve-3d;
+                transition: transform .8s;
+            }
+            
+            .memory-card:active {
+                transform: scale(0.93);
+                transition: transform .1s;
+            }
+            
+            .memory-card.flip {
+                transform: rotateY(180deg);
+                transition: transform .5s;
+            }
+            
+            .front-face,
+            .back-face {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                padding: 20px;
+                backface-visibility: hidden;
+            }
+            
+            .back-face {
+                transform: rotateY(180deg);
+            }
