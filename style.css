@@ -9,3 +9,29 @@ body {
     display: flex;
     background-color: coral;
 }
+
+.gameContainer {
+    width: 1100px;
+    height: 900px;
+    border: solid black 9px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.memory-card {
+    width: 100%;
+}
+
+.front-face .back-face {
+    margin: 100px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* .front-face {
+    width: 40px;
+    position: absolute;
+    left: 500px;
+} */
