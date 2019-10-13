@@ -30,6 +30,7 @@
                 transform: scale(1);
                 transform-style: preserve-3d;
                 transition: transform .8s;
+
             }
 
             .memory-card:active {
@@ -44,6 +45,7 @@
             
             .front-face,
             .back-face {
+                border-radius: 20%;
                 height: 100%;
                 width: 100%;
                 position: absolute;
