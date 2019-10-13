@@ -53,6 +53,3 @@ function flipCard() {
         })
     })();
 
-new fullpage('#game', {
-    autoScrolling: true
-});

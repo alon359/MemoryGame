@@ -13,7 +13,7 @@
                 background-size: cover;
             }
             
-            .gameSector {
+            .gameContainer {
                 width: 3000px;
                 height: 1600px;
                 display: flex;
@@ -21,7 +21,7 @@
                 margin: auto;
                 perspective: 1000px;
             }
-            
+
             .memory-card {
                 width: calc(25% - 10px);
                 height: calc(25% - 10px);
@@ -31,12 +31,12 @@
                 transform-style: preserve-3d;
                 transition: transform .8s;
             }
-            
+
             .memory-card:active {
                 transform: scale(0.93);
                 transition: transform .1s;
             }
-            
+
             .memory-card.flip {
                 transform: rotateY(180deg);
                 transition: transform .5s;
